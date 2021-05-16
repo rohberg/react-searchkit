@@ -5,6 +5,7 @@
  * React-SearchKit is free software; you can redistribute it and/or modify it
  * under the terms of the MIT License; see LICENSE file for more details.
  */
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import _isEmpty from 'lodash/isEmpty';
 import { applyMiddleware, createStore } from 'redux';
@@ -100,6 +101,15 @@ export function createStoreWithConfig(appConfig) {
   return createStore(
     rootReducer,
     preloadedState,
-    applyMiddleware(thunk.withExtraArgument(appConfig))
+    composeWithDevTools(
+      applyMiddleware(thunk.withExtraArgument(appConfig))
+    )    
   );
 }
+
+
+
+// const store = createStore(reducer, composeWithDevTools(
+//   applyMiddleware(...middleware),
+//   // other store enhancers if any
+// ));

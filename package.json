@@ -21,7 +21,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "redux-devtools-extension": "^2.13.9"
+  },
   "peerDependencies": {
     "axios": "^0.19.2",
     "lodash": "^4.17.15",
