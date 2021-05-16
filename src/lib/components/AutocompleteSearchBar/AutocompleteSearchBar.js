@@ -11,7 +11,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Input } from 'semantic-ui-react';
 import Overridable from 'react-overridable';
-import './AutocompleteSearchBar.scss';
+import './AutocompleteSearchBar.css';
 import { buildUID } from '../../util';
 
 class AutocompleteSearchBar extends Component {
