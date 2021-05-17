@@ -17,9 +17,15 @@ import {
 } from 'semantic-ui-react';
 import { CERNVideosReactSearchKit } from './cern-videos';
 import { ESReactSearchKit } from './elasticsearch';
+import { ESReactSearchKitIGIB } from './igib';
 import { ZenodoReactSearchKit } from './zenodo';
 
 const demos = {
+  igib: {
+    label: 'ElasticSearch 7 IGIB',
+    text: 'You Know, for Search',
+    cmp: <ESReactSearchKitIGIB />,
+  },
   es7: {
     label: 'ElasticSearch 7',
     text: 'You Know, for Search',
